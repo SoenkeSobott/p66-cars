@@ -318,6 +318,6 @@ export const translations = {
     },
     footer: { tagline: 'We connect car buyers with qualified professionals — simple, fair, and reliable.' },
   },
-} as const
+}
 
 export type T = typeof translations.de
