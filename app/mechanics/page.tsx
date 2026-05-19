@@ -1,6 +1,7 @@
 'use client'
 
 import Nav from '@/components/Nav'
+import MechanicForm from '@/components/MechanicForm'
 import { useLanguage } from '@/lib/LanguageContext'
 
 const benefitIcons = [
@@ -89,16 +90,15 @@ export default function MechanicsPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-amber-400 px-6 py-20 flex flex-col items-center gap-4 text-center">
-        <h2 className="text-3xl font-bold text-slate-900">{m.cta.title}</h2>
-        <p className="text-amber-900/70 max-w-sm">{m.cta.subtitle}</p>
-        <button
-          className="mt-4 bg-slate-900 hover:bg-slate-800 text-white font-semibold px-8 py-3.5 rounded-xl transition-colors opacity-70 cursor-not-allowed"
-          disabled
-        >
-          {m.cta.button}
-        </button>
+      {/* Contact form */}
+      <section className="bg-amber-400 px-6 py-20">
+        <div className="max-w-2xl mx-auto">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-slate-900">{m.cta.title}</h2>
+            <p className="text-amber-900/70 mt-2">{m.cta.subtitle}</p>
+          </div>
+          <MechanicForm />
+        </div>
       </section>
 
       <footer className="text-center py-6 text-slate-400 text-sm border-t border-slate-100">

@@ -1,6 +1,7 @@
 'use client'
 
 import Nav from '@/components/Nav'
+import BuyerForm from '@/components/BuyerForm'
 import { useLanguage } from '@/lib/LanguageContext'
 
 const benefitIcons = [
@@ -111,19 +112,16 @@ export default function BuyersPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-slate-900 px-6 py-20 flex flex-col items-center gap-4 text-center">
-        <h2 className="text-3xl font-bold text-white">{b.cta.title}</h2>
-        <p className="text-slate-400 max-w-sm">{b.cta.subtitle}</p>
-        <button
-          className="mt-4 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-3.5 rounded-xl transition-colors opacity-70 cursor-not-allowed"
-          disabled
-        >
-          {b.cta.button}
-        </button>
+      {/* Contact form */}
+      <section className="px-6 py-20 max-w-2xl mx-auto w-full">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl font-bold text-slate-900">{b.cta.title}</h2>
+          <p className="text-slate-500 mt-2">{b.cta.subtitle}</p>
+        </div>
+        <BuyerForm />
       </section>
 
-      <footer className="text-center py-6 text-slate-400 text-sm border-t border-slate-800 bg-slate-900">
+      <footer className="text-center py-6 text-slate-400 text-sm border-t border-slate-100 bg-white">
         &copy; {new Date().getFullYear()} p66.cars
       </footer>
     </main>
