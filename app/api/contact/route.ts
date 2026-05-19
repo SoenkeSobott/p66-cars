@@ -1,7 +1,7 @@
 import nodemailer from 'nodemailer'
 import { NextRequest, NextResponse } from 'next/server'
 
-type ContactBody = { type: 'buyer' | 'mechanic'; [key: string]: string }
+type ContactBody = { type: 'buyer' | 'mechanic';[key: string]: string }
 
 const LABELS: Record<string, string> = {
   name: 'Name',
@@ -65,7 +65,7 @@ export async function POST(req: NextRequest) {
   try {
     await transporter.sendMail({
       from: `p66.cars <${process.env.GMAIL_USER}>`,
-      to: 'heimann_p@yahoo.de',
+      to: 'daniel.l.heimann@gmail.com',
       subject,
       html: buildEmail(type, fields),
     })
