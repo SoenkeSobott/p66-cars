@@ -1,20 +1,23 @@
-import Link from "next/link";
+'use client'
+
+import Link from 'next/link'
+import Nav from '@/components/Nav'
+import { useLanguage } from '@/lib/LanguageContext'
 
 export default function Home() {
+  const { t } = useLanguage()
+  const h = t.home
+
   return (
     <main className="min-h-screen bg-white flex flex-col">
-      <nav className="px-6 py-5">
-        <span className="text-xl font-semibold tracking-tight text-slate-900">p66.cars</span>
-      </nav>
+      <Nav />
 
       <div className="flex-1 flex flex-col items-center justify-center px-6 py-12 gap-6">
-        <p className="text-sm font-medium tracking-widest uppercase text-slate-400">Who are you?</p>
-        <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 text-center leading-tight max-w-xl">
-          The smarter way to buy or inspect a car
+        <p className="text-sm font-medium tracking-widest uppercase text-slate-400">{h.eyebrow}</p>
+        <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 text-center leading-tight max-w-2xl">
+          {h.title}
         </h1>
-        <p className="text-slate-500 text-center max-w-md text-lg">
-          Buyers get expert eyes before they sign. Mechanics earn by doing what they already know.
-        </p>
+        <p className="text-slate-500 text-center max-w-md text-lg">{h.subtitle}</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-2xl mt-6">
           <Link
@@ -28,11 +31,11 @@ export default function Home() {
               </svg>
             </div>
             <div>
-              <h2 className="text-xl font-semibold text-white">I want to buy a car</h2>
-              <p className="text-slate-400 text-sm mt-1">Get a mechanic to check it before you commit</p>
+              <h2 className="text-xl font-semibold text-white">{h.buyerCard.title}</h2>
+              <p className="text-slate-400 text-sm mt-1">{h.buyerCard.subtitle}</p>
             </div>
             <span className="text-blue-400 text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
-              Find a mechanic
+              {h.buyerCard.cta}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
               </svg>
@@ -49,11 +52,11 @@ export default function Home() {
               </svg>
             </div>
             <div>
-              <h2 className="text-xl font-semibold text-slate-900">I&apos;m a mechanic</h2>
-              <p className="text-slate-700 text-sm mt-1">Earn money by helping buyers inspect cars</p>
+              <h2 className="text-xl font-semibold text-slate-900">{h.mechanicCard.title}</h2>
+              <p className="text-slate-700 text-sm mt-1">{h.mechanicCard.subtitle}</p>
             </div>
             <span className="text-slate-900 text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
-              See how it works
+              {h.mechanicCard.cta}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
               </svg>
@@ -66,5 +69,5 @@ export default function Home() {
         &copy; {new Date().getFullYear()} p66.cars
       </footer>
     </main>
-  );
+  )
 }
