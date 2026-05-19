@@ -65,7 +65,7 @@ export async function POST(req: NextRequest) {
   try {
     await transporter.sendMail({
       from: `p66.cars <${process.env.GMAIL_USER}>`,
-      to: 'heimann_p@yahoo.com',
+      to: 'heimann_p@yahoo.de',
       subject,
       html: buildEmail(type, fields),
     })
