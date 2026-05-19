@@ -1,7 +1,5 @@
-import { Resend } from 'resend'
+import nodemailer from 'nodemailer'
 import { NextRequest, NextResponse } from 'next/server'
-
-const resend = new Resend(process.env.RESEND_API_KEY)
 
 type ContactBody = { type: 'buyer' | 'mechanic'; [key: string]: string }
 
@@ -51,18 +49,29 @@ export async function POST(req: NextRequest) {
   const body = (await req.json()) as ContactBody
   const { type, ...fields } = body
 
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.GMAIL_USER,
+      pass: process.env.GMAIL_APP_PASSWORD,
+    },
+  })
+
   const subject =
     type === 'buyer'
       ? `New buyer request — ${fields.name}`
       : `New mechanic application — ${fields.name}`
 
-  const { error } = await resend.emails.send({
-    from: 'p66.cars <onboarding@resend.dev>',
-    to: 'sobott.soenke@gmail.com',
-    subject,
-    html: buildEmail(type, fields),
-  })
-
-  if (error) return NextResponse.json({ error: error.message }, { status: 500 })
-  return NextResponse.json({ ok: true })
+  try {
+    await transporter.sendMail({
+      from: `p66.cars <${process.env.GMAIL_USER}>`,
+      to: process.env.GMAIL_USER,
+      subject,
+      html: buildEmail(type, fields),
+    })
+    return NextResponse.json({ ok: true })
+  } catch (err) {
+    console.error(err)
+    return NextResponse.json({ error: 'Failed to send email' }, { status: 500 })
+  }
 }
