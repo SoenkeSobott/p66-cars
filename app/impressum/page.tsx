@@ -11,27 +11,27 @@ const de = (
     <section className="mb-8">
       <h2 className="text-lg font-semibold text-slate-900 mb-3">Angaben gemäß § 5 TMG</h2>
       <p className="text-slate-600">
-        [VORNAME NACHNAME]<br />
-        [STRAßE HAUSNUMMER]<br />
-        [PLZ] [STADT]<br />
-        Deutschland
+        Daniel Heimann<br />
+        Grenzacherstrasse 32<br />
+        4058 Basel<br />
+        Schweiz
       </p>
     </section>
 
     <section className="mb-8">
       <h2 className="text-lg font-semibold text-slate-900 mb-3">Kontakt</h2>
       <p className="text-slate-600">
-        E-Mail: [EMAIL]<br />
-        Telefon: [TELEFONNUMMER]
+        E-Mail: daniel.heimann@gmail.com<br />
+        Telefon: +41 79 877 45 43
       </p>
     </section>
 
     <section className="mb-8">
       <h2 className="text-lg font-semibold text-slate-900 mb-3">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
       <p className="text-slate-600">
-        [VORNAME NACHNAME]<br />
-        [STRAßE HAUSNUMMER]<br />
-        [PLZ] [STADT]
+        Daniel Heimann<br />
+        Grenzacherstrasse 32<br />
+        4058 Basel
       </p>
     </section>
 
@@ -63,27 +63,27 @@ const en = (
     <section className="mb-8">
       <h2 className="text-lg font-semibold text-slate-900 mb-3">Information pursuant to § 5 TMG</h2>
       <p className="text-slate-600">
-        [FIRST NAME LAST NAME]<br />
-        [STREET AND NUMBER]<br />
-        [POSTAL CODE] [CITY]<br />
-        Germany
+        Daniel Heimann<br />
+        Grenzacherstrasse 32<br />
+        4058 Basel<br />
+        Switzerland
       </p>
     </section>
 
     <section className="mb-8">
       <h2 className="text-lg font-semibold text-slate-900 mb-3">Contact</h2>
       <p className="text-slate-600">
-        Email: [EMAIL]<br />
-        Phone: [PHONE NUMBER]
+        Email: daniel.heimann@gmail.com<br />
+        Phone: +41 79 877 45 43
       </p>
     </section>
 
     <section className="mb-8">
       <h2 className="text-lg font-semibold text-slate-900 mb-3">Responsible for content pursuant to § 55 para. 2 RStV</h2>
       <p className="text-slate-600">
-        [FIRST NAME LAST NAME]<br />
-        [STREET AND NUMBER]<br />
-        [POSTAL CODE] [CITY]
+        Daniel Heimann<br />
+        Grenzacherstrasse 32<br />
+        4058 Basel
       </p>
     </section>
 

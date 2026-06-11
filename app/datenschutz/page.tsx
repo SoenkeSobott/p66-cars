@@ -13,11 +13,11 @@ const de = (
       <h2 className="text-lg font-semibold text-slate-900 mb-3">1. Verantwortlicher</h2>
       <p className="text-slate-600">
         Verantwortlicher im Sinne der DSGVO ist:<br /><br />
-        [VORNAME NACHNAME]<br />
-        [STRAßE HAUSNUMMER]<br />
-        [PLZ] [STADT]<br />
-        Deutschland<br /><br />
-        E-Mail: [EMAIL]
+        Daniel Heimann<br />
+        Grenzacherstrasse 32<br />
+        4058 Basel<br />
+        Schweiz<br /><br />
+        E-Mail: daniel.heimann@gmail.com
       </p>
     </section>
 
@@ -74,14 +74,14 @@ const de = (
         <li>Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)</li>
       </ul>
       <p className="text-slate-600 mt-3">
-        Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: [EMAIL]
+        Zur Ausübung Ihrer Rechte wenden Sie sich bitte an: daniel.heimann@gmail.com
       </p>
     </section>
 
     <section className="mb-8">
       <h2 className="text-lg font-semibold text-slate-900 mb-3">7. Beschwerderecht</h2>
       <p className="text-slate-600">
-        Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren. Die zuständige Aufsichtsbehörde richtet sich nach Ihrem Wohnort in Deutschland.
+        Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren. Die zuständige Aufsichtsbehörde richtet sich nach Ihrem Wohnort in Schweiz.
       </p>
     </section>
   </>
@@ -96,11 +96,11 @@ const en = (
       <h2 className="text-lg font-semibold text-slate-900 mb-3">1. Data Controller</h2>
       <p className="text-slate-600">
         The data controller within the meaning of the GDPR is:<br /><br />
-        [FIRST NAME LAST NAME]<br />
-        [STREET AND NUMBER]<br />
-        [POSTAL CODE] [CITY]<br />
-        Germany<br /><br />
-        Email: [EMAIL]
+        Daniel Heimann<br />
+        Grenzacherstrasse 32<br />
+        4058 Basel<br />
+        Switzerland<br /><br />
+        Email: daniel.heimann@gmail.com
       </p>
     </section>
 
@@ -157,14 +157,14 @@ const en = (
         <li>Objection to processing (Art. 21 GDPR)</li>
       </ul>
       <p className="text-slate-600 mt-3">
-        To exercise your rights, please contact: [EMAIL]
+        To exercise your rights, please contact: daniel.heimann@gmail.com
       </p>
     </section>
 
     <section className="mb-8">
       <h2 className="text-lg font-semibold text-slate-900 mb-3">7. Right to Lodge a Complaint</h2>
       <p className="text-slate-600">
-        You have the right to lodge a complaint with a data protection supervisory authority regarding the processing of your personal data. The competent authority depends on your place of residence in Germany.
+        You have the right to lodge a complaint with a data protection supervisory authority regarding the processing of your personal data. The competent authority depends on your place of residence in Switzerland.
       </p>
     </section>
   </>
