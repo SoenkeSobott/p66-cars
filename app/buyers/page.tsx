@@ -1,6 +1,7 @@
 'use client'
 
 import Nav from '@/components/Nav'
+import Footer from '@/components/Footer'
 import BuyerForm from '@/components/BuyerForm'
 import { useLanguage } from '@/lib/LanguageContext'
 
@@ -121,9 +122,7 @@ export default function BuyersPage() {
         <BuyerForm />
       </section>
 
-      <footer className="text-center py-6 text-slate-400 text-sm border-t border-slate-100 bg-white">
-        &copy; {new Date().getFullYear()} p66.cars
-      </footer>
+      <Footer />
     </main>
   )
 }

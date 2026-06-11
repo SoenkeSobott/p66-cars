@@ -1,6 +1,7 @@
 'use client'
 
 import Nav from '@/components/Nav'
+import Footer from '@/components/Footer'
 import MechanicForm from '@/components/MechanicForm'
 import { useLanguage } from '@/lib/LanguageContext'
 
@@ -101,9 +102,7 @@ export default function MechanicsPage() {
         </div>
       </section>
 
-      <footer className="text-center py-6 text-slate-400 text-sm border-t border-slate-100">
-        &copy; {new Date().getFullYear()} p66.cars &mdash; {t.footer.tagline}
-      </footer>
+      <Footer />
     </main>
   )
 }

@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import Nav from '@/components/Nav'
+import Footer from '@/components/Footer'
 import { useLanguage } from '@/lib/LanguageContext'
 
 export default function Home() {
@@ -65,9 +66,7 @@ export default function Home() {
         </div>
       </div>
 
-      <footer className="text-center py-6 text-slate-400 text-sm">
-        &copy; {new Date().getFullYear()} p66.cars
-      </footer>
+      <Footer />
     </main>
   )
 }
